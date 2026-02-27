@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #2e7d32;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links span {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* Pages */
+.page { display: none; }
+.active { display: block; }
+
+/* HERO */
+.hero {
+  height: 350px;
+  background: linear-gradient(135deg, #2e7d32, #81c784);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero button {
+  width: 180px;
+  padding: 12px;
+  margin-top: 15px;
+  background: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Floating shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  animation: float 6s infinite ease-in-out;
+}
+
+.s1 { width:120px; height:120px; background:white; top:40px; right:80px; }
+.s2 { width:80px; height:80px; background:white; bottom:40px; right:200px; }
+.s3 { width:60px; height:60px; background:white; top:120px; right:250px; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Filters */
+.filters {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.filters button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  background: #2e7d32;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Product Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer;
+}
+
+.card img { width: 100%; border-radius: 6px; }
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Panels */
+.panel {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+/* Contact Form */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}

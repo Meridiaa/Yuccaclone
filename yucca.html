@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yucca Packaging</title>
+<link rel="stylesheet" href="yucca.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">YUCCA</div>
+  <div class="nav-links">
+    <span onclick="showPage('home')">Home</span>
+    <span onclick="showPage('products')">Products</span>
+    <span onclick="showPage('about')">About</span>
+    <span onclick="showPage('contact')">Contact</span>
+  </div>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page active">
+
+  <div class="hero">
+    <h1>Packaging, But Make It Cool 🌿</h1>
+    <p>Smart • Sustainable • Future-Ready</p>
+    <button onclick="showPage('products')">Explore Products</button>
+
+    <!-- Floating shapes -->
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+  </div>
+
+</div>
+
+<!-- PRODUCTS -->
+<div id="products" class="page">
+
+  <h2>Our Products</h2>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button>All</button>
+    <button>Food</button>
+    <button>Cups</button>
+    <button>Industrial</button>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openModal('Eco Food Containers')">
+      <img src="https://picsum.photos/300?1">
+      <h3>Food Containers</h3>
+    </div>
+
+    <div class="card" onclick="openModal('Premium Coffee Cups')">
+      <img src="https://picsum.photos/300?2">
+      <h3>Coffee Cups</h3>
+    </div>
+
+    <div class="card" onclick="openModal('Industrial Meat Packaging')">
+      <img src="https://picsum.photos/300?3">
+      <h3>Meat Packaging</h3>
+    </div>
+
+    <div class="card" onclick="openModal('Produce Trays')">
+      <img src="https://picsum.photos/300?4">
+      <h3>Produce Trays</h3>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+  <div class="panel">
+    <h2>About Us</h2>
+    <p>
+      We design packaging that protects food, businesses, and the planet.
+      Innovation + sustainability = our thing.
+    </p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+  <div class="panel">
+    <h2>Contact</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button>Send Message</button>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal()">✖</span>
+    <h2 id="modalTitle"></h2>
+    <p>High-quality, eco-friendly packaging solution for modern businesses.</p>
+  </div>
+</div>
+
+<script>
+
+/* Page switching */
+function showPage(id){
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+/* Modal */
+function openModal(title){
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
